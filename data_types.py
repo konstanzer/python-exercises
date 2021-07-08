@@ -16,7 +16,22 @@ def earnings(rates, hours):
 	return earned
 
 #3
+student_slots = np.zeros(10)
+class_slots = [0,4] 
+class_enrollment = 18;
+
+def can_enroll(class_enrollment, class_slots, student_slots):
+	max_class_size = 21
+	if class_enrollment >= max_class_size:
+		return False
+	for time in class_slots:
+		if student_slots[time] == 1:
+			return False
+	return True
+
 
 if __name__ == "__main__":
 	print("Those movies cost ${0:.2f}".format(total))
 	print("You made ${0:.2f}".format(earnings(rates, hours)))
+	print("Student can enroll: " +
+		str(can_enroll(class_enrollment, class_slots, student_slots)))
