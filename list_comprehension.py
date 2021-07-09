@@ -15,60 +15,59 @@ output = []
 for fruit in fruits:
     output.append(fruit.upper())
 '''
-#----------------------------------------------------------------
 
-# Exercise 1 - rewrite the above example code using list comprehension syntax. 
+# 1 - rewrite the above example code using list comprehension syntax. 
 fruity1 = [f for f in fruits]
 
-# Exercise 2 - create a variable capitalized_fruits and use list comprehension syntax to produce output
+# 2 - create a variable capitalized_fruits and use list comprehension syntax to produce output
 fruity2 = [f.capitalize() for f in fruits]
 
-# Exercise 3 - Use a list comprehension to make a variable fruits_with_more_than_two_vowels.
+# 3 - Use a list comprehension to make a variable fruits_with_more_than_two_vowels.
 fruity3 = [f for f in fruits if len([v for v in f if v in 'aeiou']) > 2]
 
-# Exercise 4 - make a variable fruits_with_only_two_vowels.
+# 4 - make a variable fruits_with_only_two_vowels.
 fruity4 = [f for f in fruits if len([v for v in f if v in 'aeiou']) == 2]
 
-# Exercise 5 - make a list that contains each fruit with more than 5 characters
+# 5 - make a list that contains each fruit with more than 5 characters
 fruity5 = [f for f in fruits if len(f) > 5]
 
-# Exercise 6 - make a list that contains each fruit with exactly 5 characters
+# 6 - make a list that contains each fruit with exactly 5 characters
 fruity6 = [f for f in fruits if len(f) == 5]
 
-# Exercise 7 - Make a list that contains fruits that have less than 5 characters
+# 7 - Make a list that contains fruits that have less than 5 characters
 fruity7 = [f for f in fruits if len(f) < 5]
 
-# Exercise 8 - Make a list containing the number of characters in each fruit.
+# 8 - Make a list containing the number of characters in each fruit.
 fruity8 = [len(f) for f in fruits]
 
-# Exercise 9 - Make a list of only the fruits that contain the letter "a"
+# 9 - Make a list of only the fruits that contain the letter "a"
 fruity9 = [f for f in fruits if 'a' in f]
 
 #----------------------------------------------------------------
 from math import sqrt
 
-# Exercise 10 - Make a variable that holds only the even numbers 
+# 10 - Make a variable that holds only the even numbers 
 numbs10 = [n for n in numbers if n%2 == 0]
 
-# Exercise 11 - Make a variable that holds only the odd numbers
+# 11 - Make a variable that holds only the odd numbers
 numbs11 = [n for n in numbers if n%2 == 1]
 
-# Exercise 12 - Make a variable that holds only the positive numbers
+# 12 - Make a variable that holds only the positive numbers
 numbs12 = [n for n in numbers if n > 0]
 
-# Exercise 13 - Make a variable that holds only the negative numbers
+# 13 - Make a variable that holds only the negative numbers
 numbs13 = [n for n in numbers if n < 0]
 
-# Exercise 14 - produce a list of numbers with 2 or more numerals
+# 14 - produce a list of numbers with 2 or more numerals
 numbs14 = [n for n in numbers if abs(n) >= 10]
 
-# Exercise 15 - Make a variable of numbers list with each element squared.
+# 15 - Make a variable of numbers list with each element squared.
 numbs15 = [n**2 for n in numbers]
 
-# Exercise 16 - Make a variable w/ only the numbers that are both odd and negative.
+# 16 - Make a variable w/ only the numbers that are both odd and negative.
 numbs16 = [n for n in numbers if n in numbs11 and n in numbs13]
 
-# Exercise 17 - Make a variable w/ each number plus five. 
+# 17 - Make a variable w/ each number plus five. 
 numbs17 = [n+5 for n in numbers]
 
 # B: Make a variable of primes
@@ -81,7 +80,7 @@ def is_prime(n):
 
 primes = [n for n in numbers if is_prime(n)]
 
-#----------------------------------------------------------------
+
 
 if __name__ == "__main__":
     all_vars = dir()
