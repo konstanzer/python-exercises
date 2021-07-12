@@ -71,16 +71,41 @@ for n in range(1,50,2):
     else: print(n)
 
 
-x = input("A positive number, please: ")
+x = input("A positive integer, please: ")
 while not x.isdigit() or int(x)<0:
-    x = input("A positive number, please: ")
+    x = input("A positive integer, please: ")
 for n in range(0, int(x)+1): print(n)
 print("And reversed...")
 for n in range(int(x), 0, -1): print(n)
 
 
 ###fizzbuzz
+for x in range(1,101):
+    if x%3==0:
+        if x%5==0:
+            print('fizzbuzz')
+        else:
+            print('fizz')
+    if x%5==0:
+        print('buzz')
+    else:
+        print(x)
 
 
+x = int(input("I demand a positive integer: "))
+for i in range(1, x+1):
+    print("n: " + str(i) + " | square: " +\
+             str(i**2) + " | cube: " + str(i**3))
+
+
+x = int(input("A GRADE UP TO 100: "))
+g = dict(B=80, A=88, C=67, D=60)
+grade = 'F'
+
+for k,v in g.items():
+    if x >= v:
+        if k < grade:
+            grade = k
+print(grade)
 
 
