@@ -25,7 +25,8 @@ def is_cons(x):
     Args: str
     Output: bool
     """
-    return True if x.lower() in [c for c in 'qwrtypsdfghjklzxcvbnm'] else False
+    return True if x.lower() in [c for c in \
+     'qwrtypsdfghjklzxcvbnm'] else False
 
 def capital_cons(x):
     """
@@ -54,22 +55,51 @@ def discount(discount, price):
     """
     return price*(1-discount)
 
-    '''Define a function named handle_commas. It should accept a string that is a number that contains commas in it as input, and return a number as output.
-    Define a function named get_letter_grade. It should accept a number and return the letter grade associated with that number (A-F).
-    Define a function named remove_vowels that accepts a string and returns a string with all the vowels removed.
-    Define a function named normalize_name. It should accept a string and return a valid python identifier, that is:
-        anything that is not a valid python identifier should be removed
-        leading and trailing whitespace should be removed
-        everything should be lowercase
-        spaces should be replaced with underscores
-        for example:
-            Name will become name
-            First Name will become first_name
-            % Completed will become completed
-    Write a function named cumulative_sum that accepts a list of numbers and returns a list that is the cumulative sum of the numbers in the list.
-        cumulative_sum([1, 1, 1]) returns [1, 2, 3]
-        cumulative_sum([1, 2, 3, 4]) returns [1, 3, 6, 10]
-    '''
+def no_commas(s):
+    """
+    Accept a string that is a number that contains commas
+    in it as input, and return a number as output.
+    Args: str
+    Output: float
+    """
+    return int(s.replace(',',''))
+
+def lettuce(n):
+    """
+    Accept a number and return the letter grade associated
+    with that number (A-F).
+    Args: int
+    Output: str
+    """
+    return 'A' if n >= 90 else 'F'
+
+def no_vowels(s):
+    """
+    Accepts a string and returns a string with all the
+    vowels removed.
+    Args: str
+    Output: str
+    """
+    return ''.join([c for c in s if c not in 'aeiou'])
+
+def norm_name(s):
+    """
+    Accept a string and return a valid python identifier:
+    First Name will become first_name
+    Args: str
+    Output: str
+    """
+    return '_'.join(s.split()).lower().strip()
+
+def cumsum(n):
+    """
+    Accepts a list of numbers and returns a list that
+    is the cumulative sum of the numbers in the list.
+    Args: list
+    Output: list
+    """
+    return [sum(n[:ix+1]) for ix,_ in enumerate(n)]
+
 
 if __name__ == "__main__":
     print(is_two('2'))
@@ -80,11 +110,10 @@ if __name__ == "__main__":
     print(capital_cons('apple'))
     print(calc_tip(.15,565.))
     print(discount(.15,565.))
-
-
-
-
-
-
+    print(lettuce(90))
+    print(no_commas('1,002'))
+    print(no_vowels('My little horse must think it queer'))
+    print(norm_name(' Nathaniel Hawthorne'))
+    print(cumsum([1,1,2,3,5]))
 
 
