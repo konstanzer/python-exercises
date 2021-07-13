@@ -37,14 +37,14 @@ def capital_cons(x):
     """
     return x.capitalize() if is_cons(x[0]) else x
 
-def calc_tip(tip, bill):
+def calculate_tip(tip, bill):
     """
     Accept a tip percentage between 0 and 1 and the
     bill total, and return the amount to tip.
     Args: float, float
     Output: float
     """
-    return tip*bill
+    return "$"+str(tip*bill)
 
 def discount(discount, price):
     """
@@ -64,7 +64,7 @@ def no_commas(s):
     """
     return int(s.replace(',',''))
 
-def lettuce(n):
+def letter_grade(n):
     """
     Accept a number and return the letter grade associated
     with that number (A-F).
@@ -108,9 +108,9 @@ if __name__ == "__main__":
     print(is_cons('L'))
     print(capital_cons('library'))
     print(capital_cons('apple'))
-    print(calc_tip(.15,565.))
+    print(calculate_tip(.15,565.))
     print(discount(.15,565.))
-    print(lettuce(90))
+    print(letter_grade(90))
     print(no_commas('1,002'))
     print(no_vowels('My little horse must think it queer'))
     print(norm_name(' Nathaniel Hawthorne'))
